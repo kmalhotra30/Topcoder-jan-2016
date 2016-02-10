@@ -1,0 +1,55 @@
+<!Doctype html>
+<html>
+      <head>
+            <title>Hi</title>
+            <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+            <style>
+                   body{
+                          background-repeat:no-repeat;
+                          background-size:cover;
+                          background-image:url("bg.jpg");
+                        }
+                        p
+                        {
+                             font-size:250%;
+                              font-family:Gerogia;
+                              color:white;
+
+
+
+                        }
+                        a{
+                              color:white;
+                        }
+                        span
+                        {
+                              background-color:yellow;
+                              font-size:300%;
+                              font-family:Gerogia;
+                              color:#555555;
+                        }
+
+            </style>
+
+      </head>
+      <body ng-app="we" ng-controller="mainc">
+            <script>
+                  var dice=prompt("Enter dice code ");
+                  if(dice.length>0)
+                  {
+                         document.writeln("<b><u><span>Your Comic Of The Day Is : </span></u></b><br/><br/>");
+                         document.writeln("<img ng-src=\"{{x}}\"/>");    
+                         
+                         document.write("<br/><br/><p>Title : " + "{{y.data.results[0].title}}"+"</p>");
+                         document.write("<p><a target=\"_blank\" href = " + "{{y.data.results[0].urls[0].url}}" + ">Link</a></p>");
+
+
+                  }
+            </script>
+
+
+            <br><br>
+
+            <script src="module.js"></script>
+      </body>
+</html>
